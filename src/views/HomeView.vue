@@ -29,7 +29,7 @@
 
       <footer class="mt-auto text-white-50">
         <p>See the project source on git hub <a href="https://github.com/MarceloDiasSchneider/vue-suellen-app"
-            class="text-white">Bootstrap</a>, by <a href="https://marceloschneider.dev.br/"
+            class="text-white">GitHub</a>, by <a href="https://marceloschneider.dev.br/"
             class="text-white">@marcelo.dias.schneider</a>.</p>
       </footer>
     </div>
