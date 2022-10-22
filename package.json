@@ -1,5 +1,5 @@
 {
-  "name": "vue-suellen",
+  "name": "vue-suellen-app",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
