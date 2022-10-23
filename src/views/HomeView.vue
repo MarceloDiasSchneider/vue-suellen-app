@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { RouterLink } from "vue-router";
+
 </script>
 
 <template>
@@ -12,7 +14,9 @@
             <a class="nav-link fw-bold py-1 px-0 active" aria-current="page" href="#">Home</a>
             <a class="nav-link fw-bold py-1 px-0" href="#">Features</a>
             <a class="nav-link fw-bold py-1 px-0" href="#">Contact</a>
-            <a class="nav-link fw-bold py-1 px-0" href="#">Sing In</a>
+            <RouterLink :to="{ name: 'sing-in' }" class="nav-link fw-bold py-1 px-0">
+              Sing In
+            </RouterLink>
           </nav>
         </div>
       </header>
@@ -20,8 +24,8 @@
       <main class="px-3">
         <h1>Suellen is Vue.js App.</h1>
         <p class="lead">It's a personal project to Learn and Test Vue.js 3, Vue Router and Pinea. This project is
-          connect to a Nest.js Back-End application, with has some protected routers, so fell free to <a href="#"
-            class="text-secondary"> Sing in</a> and explore the features</p>
+          connect to a Nest.js Back-End application, with has some protected routers, so fell free to <RouterLink
+            :to="{ name: 'sing-in' }" class="text-secondary"> Sing in</RouterLink> and explore the features</p>
         <p class="lead">
           <a href="#" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Learn more</a>
         </p>
@@ -38,54 +42,51 @@
 </template>
 
 <style scoped>
-.bd-placeholder-img {
-  font-size: 1.125rem;
-  text-anchor: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
+/*
+ * Base structure
+ */
+
+body {
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
 }
 
-@media (min-width: 768px) {
-  .bd-placeholder-img-lg {
-    font-size: 3.5rem;
-  }
+.cover-container {
+  max-width: 42em;
 }
 
-.b-example-divider {
-  height: 3rem;
-  background-color: rgba(0, 0, 0, .1);
-  border: solid rgba(0, 0, 0, .15);
-  border-width: 1px 0;
-  box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+/*
+ * Header
+ */
+.nav-masthead .nav-link {
+  color: rgba(255, 255, 255, .5);
+  border-bottom: .25rem solid transparent;
 }
 
-.b-example-vr {
-  flex-shrink: 0;
-  width: 1.5rem;
-  height: 100vh;
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  border-bottom-color: rgba(255, 255, 255, .25);
 }
 
-.bi {
-  vertical-align: -.125em;
-  fill: currentColor;
+.nav-masthead .nav-link+.nav-link {
+  margin-left: 1rem;
 }
 
-.nav-scroller {
-  position: relative;
-  z-index: 2;
-  height: 2.75rem;
-  overflow-y: hidden;
+.nav-masthead .active {
+  color: #fff;
+  border-bottom-color: #fff;
 }
 
-.nav-scroller .nav {
-  display: flex;
-  flex-wrap: nowrap;
-  padding-bottom: 1rem;
-  margin-top: -1px;
-  overflow-x: auto;
-  text-align: center;
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
+/*
+ * Globals
+ */
+
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #333;
+  text-shadow: none;
+  /* Prevent inheritance from `body` */
 }
 </style>
