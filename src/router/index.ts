@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
+import { why_the_composition_api_children } from "@/router/why-the-composition-api-children.ts";
 import HomeView from "../views/HomeView.vue";
 
 const router = createRouter({
@@ -10,16 +11,10 @@ const router = createRouter({
       component: HomeView,
     },
     {
-      path: "/vue-composition-api",
+      path: "/#",
       name: "vue-composition-api",
       // component: () => import("@/views/vue-composition-api/MainView.vue"),
-      children: [
-        {
-          path: "/why-the-composition-api",
-          name: "why-the-composition-api",
-          component: () => import("@/views/vue-composition-api/WhyTheCompositionApi.vue"),
-        },
-      ],
+      children: why_the_composition_api_children,
     },
     {
       path: "/auth",
