@@ -1,5 +1,6 @@
 <script lang="ts">
 import ArrowRightCircle from '@/assets/images/icons/ArrowRightCircle.vue'
+import { watchEffect } from '@vue/runtime-core';
 
 export default {
   props: {
@@ -11,6 +12,11 @@ export default {
       type: Array,
       required: false
     },
+  },
+  setup(props) {
+    watchEffect(() => {
+      console.log("Title", props.title);
+    })
   },
   components: {
     ArrowRightCircle,
