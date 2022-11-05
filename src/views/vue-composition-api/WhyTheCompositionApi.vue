@@ -1,6 +1,7 @@
 <script lang="ts">
 import Layout from '@/views/vue-composition-api/components/Layout.vue'
 import ArrowRightCircle from '@/assets/images/icons/ArrowRightCircle.vue'
+import Topics from '@/views/vue-composition-api/components/Topics.vue';
 
 export default {
   setup() {
@@ -21,6 +22,7 @@ export default {
   components: {
     Layout,
     ArrowRightCircle,
+    Topics,
   }
 };
 
@@ -30,13 +32,7 @@ export default {
   <Layout>
     <template #content>
       <div class="container px-4 py-5" id="hanging-icons">
-        <h2 class="pb-2 border-bottom">Why the composition api?</h2>
-        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-          <div v-for="reason, index in reasons" :key="index" class="col d-flex align-items-start">
-            <ArrowRightCircle />
-            <p>{{ reason }}</p>
-          </div>
-        </div>
+        <Topics title="Why the composition api?" :topics="reasons" />
       </div>
     </template>
   </Layout>
