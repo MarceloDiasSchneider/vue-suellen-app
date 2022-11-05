@@ -1,6 +1,6 @@
 <script lang="ts">
 import Layout from '@/views/vue-composition-api/components/Layout.vue'
-import ArrowRightCircle from '@/assets/images/icons/ArrowRightCircle.vue'
+import Topics from '@/views/vue-composition-api/components/Topics.vue'
 
 export default {
   setup() {
@@ -40,7 +40,7 @@ export default {
       "With the composition API we can declare reactive objects that aren't associated with a component.",
       "setup () { return { \"Returns the variables and functions that template will need\" } }",
       "Is more verbose, but it also makes our component more maintainable",
-      "We can contral what gets exposed",
+      "We can control what gets exposed",
       "We can trace where a property is defined",
     ];
 
@@ -48,7 +48,7 @@ export default {
   },
   components: {
     Layout,
-    ArrowRightCircle,
+    Topics,
   }
 };
 
@@ -58,41 +58,11 @@ export default {
   <Layout>
     <template #content>
       <div class="container px-4 py-5" id="hanging-icons">
-        <h2 class="pb-2 border-bottom">Setup & Reactive References</h2>
-        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-          <div v-for="info, index in infos" :key="index" class="col d-flex align-items-start">
-            <ArrowRightCircle />
-            <p>{{ info }}</p>
-          </div>
-        </div>
-        <h2 class="pb-2 border-bottom">When use Composition APi?</h2>
-        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-          <div v-for="reason, index in whenUseCompositionAPi" :key="index" class="col d-flex align-items-start">
-            <ArrowRightCircle />
-            <p>{{ reason }}</p>
-          </div>
-        </div>
-        <h2 class="pb-2 border-bottom">setup() {} are exceuter before the:</h2>
-        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-          <div v-for="execution, index in setup_executions_before" :key="index" class="col d-flex align-items-start">
-            <ArrowRightCircle />
-            <p>{{ execution }}</p>
-          </div>
-        </div>
-        <h2 class="pb-2 border-bottom">setup( "accept tow arguments" ) {}:</h2>
-        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-          <div v-for="argument, index in setup_arguments" :key="index" class="col d-flex align-items-start">
-            <ArrowRightCircle />
-            <pre>{{ argument }}</pre>
-          </div>
-        </div>
-        <h2 class="pb-2 border-bottom">Reactive references</h2>
-        <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-          <div v-for="argument, index in reactive_references" :key="index" class="col d-flex align-items-start">
-            <ArrowRightCircle />
-            <p>{{ argument }}</p>
-          </div>
-        </div>
+        <Topics title="Setup & Reactive References" :topics="infos" />
+        <Topics title="When use Composition APi?" :topics="whenUseCompositionAPi" />
+        <Topics title="setup() {} are exceuter before the:" :topics="setup_executions_before" />
+        <Topics title="setup( 'accept tow arguments' ) {}:" :topics="setup_arguments" />
+        <Topics title="Reactive references" :topics="reactive_references" />
       </div>
     </template>
   </Layout>
