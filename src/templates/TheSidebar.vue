@@ -41,7 +41,9 @@ export default {
         <li>
           <hr class="dropdown-divider">
         </li>
-        <li><a class="dropdown-item" href="#">Sign out</a></li>
+        <li>
+          <RouterLink :to="{ name: 'home' }" class="dropdown-item">Sing out</RouterLink>
+        </li>
       </ul>
     </div>
   </div>
