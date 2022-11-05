@@ -1,6 +1,5 @@
 <script lang="ts">
 import Layout from '@/views/vue-composition-api/components/Layout.vue'
-import ArrowRightCircle from '@/assets/images/icons/ArrowRightCircle.vue'
 import Topics from '@/views/vue-composition-api/components/Topics.vue';
 
 export default {
@@ -21,7 +20,6 @@ export default {
   },
   components: {
     Layout,
-    ArrowRightCircle,
     Topics,
   }
 };
