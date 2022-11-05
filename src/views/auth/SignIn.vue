@@ -1,7 +1,7 @@
 <template>
-  <div class="modal modal-signin position-static d-block bg-dark py-5" tabindex="-1" role="dialog" id="modalSignin">
+  <section class="modal modal-signin position-static d-block bg-dark py-5" tabindex="-1" role="dialog" id="modalSignin">
     <div class="modal-dialog" role="document">
-      <div class="modal-content rounded-4 shadow opacity-75">
+      <div class="modal-content rounded-4 shadow">
         <div class="modal-header p-5 pb-4 border-bottom-0">
           <h1 class="fw-bold mb-0 fs-2">Sign up for free</h1>
           <RouterLink :to="{ name: 'home' }" class="nav-link fw-bold py-1 px-0">
@@ -49,6 +49,16 @@
         </div>
       </div>
     </div>
-  </div>
-
+  </section>
 </template>
+
+
+<style scoped>
+/*
+ * Base structure
+ */
+
+section {
+  min-height: 100vh;
+}
+</style>
