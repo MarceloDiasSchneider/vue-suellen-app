@@ -1,6 +1,6 @@
 <script lang="ts">
-import Layout from '@/views/vue-composition-api/components/Layout.vue'
-import Topics from '@/views/vue-composition-api/components/Topics.vue'
+import Layout from "@/views/vue-composition-api/components/Layout.vue";
+import Topics from "@/views/vue-composition-api/components/Topics.vue";
 
 export default {
   setup() {
@@ -22,7 +22,7 @@ export default {
       "Methods",
       "Computed Properties",
       "Lifecycle methods",
-      "Doesn't have access to \"this\"",
+      'Doesn\'t have access to "this"',
     ];
     const setup_arguments = [
       { Props: ["Data passed to components"] },
@@ -32,26 +32,32 @@ export default {
           "Context.slots",
           "Context.parent",
           "Context.root",
-          "Context.emit"]
+          "Context.emit",
+        ],
       },
     ];
     const reactive_references = [
       "use \"import { ref } form 'vue';\" instead data();",
       "With the composition API we can declare reactive objects that aren't associated with a component.",
-      "setup () { return { \"Returns the variables and functions that template will need\" } }",
+      'setup () { return { "Returns the variables and functions that template will need" } }',
       "Is more verbose, but it also makes our component more maintainable",
       "We can control what gets exposed",
       "We can trace where a property is defined",
     ];
 
-    return { infos, whenUseCompositionAPi, setup_executions_before, setup_arguments, reactive_references, }
+    return {
+      infos,
+      whenUseCompositionAPi,
+      setup_executions_before,
+      setup_arguments,
+      reactive_references,
+    };
   },
   components: {
     Layout,
     Topics,
-  }
+  },
 };
-
 </script>
 
 <template>
@@ -59,9 +65,18 @@ export default {
     <template #content>
       <div class="container px-4 py-5" id="hanging-icons">
         <Topics title="Setup & Reactive References" :topics="infos" />
-        <Topics title="When use Composition APi?" :topics="whenUseCompositionAPi" />
-        <Topics title="setup() {} are exceuter before the:" :topics="setup_executions_before" />
-        <Topics title="setup( 'accept tow arguments' ) {}:" :topics="setup_arguments" />
+        <Topics
+          title="When use Composition APi?"
+          :topics="whenUseCompositionAPi"
+        />
+        <Topics
+          title="setup() {} are exceuter before the:"
+          :topics="setup_executions_before"
+        />
+        <Topics
+          title="setup( 'accept tow arguments' ) {}:"
+          :topics="setup_arguments"
+        />
         <Topics title="Reactive references" :topics="reactive_references" />
       </div>
     </template>

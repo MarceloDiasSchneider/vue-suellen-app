@@ -1,6 +1,6 @@
 <script lang="ts">
-import Layout from '@/views/vue-composition-api/components/Layout.vue'
-import Topics from '@/views/vue-composition-api/components/Topics.vue';
+import Layout from "@/views/vue-composition-api/components/Layout.vue";
+import Topics from "@/views/vue-composition-api/components/Topics.vue";
 
 export default {
   setup() {
@@ -16,14 +16,13 @@ export default {
       "We can still use the regular syntag with vue 3",
     ];
 
-    return { reasons }
+    return { reasons };
   },
   components: {
     Layout,
     Topics,
-  }
+  },
 };
-
 </script>
 
 <template>

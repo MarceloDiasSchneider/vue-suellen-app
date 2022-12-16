@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-import { why_the_composition_api_children } from "@/router/why-the-composition-api-children.ts";
+import { why_the_composition_api_children } from "@/router/why-the-composition-api-children.js";
 import HomeView from "../views/HomeView.vue";
 
 const router = createRouter({
